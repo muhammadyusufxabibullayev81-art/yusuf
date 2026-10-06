@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitoblar Olami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Book<span>World</span></div>
+
+        <nav>
+            <a href="#bosh">Bosh sahifa</a>
+            <a href="#kitoblar">Kitoblar</a>
+            <a href="#haqida">Biz haqimizda</a>
+            <a href="#aloqa">Aloqa</a>
+        </nav>
+
+        <button class="header-btn" id="loginBtn">Login</button>
+    </header>
+    
+    <div class="login-box" id="loginBox">
+    <div class="login-card">
+        <button class="close-btn" id="closeLogin">×</button>
+
+        <div class="login-icon">📚</div>
+
+        <h2>Welcome Back</h2>
+        <p>Kitoblar olamiga kiring</p>
+
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+
+        <button class="login-submit" id="loginSubmit">Login</button>
+
+        <span class="login-text">
+            Don't have an account? <b>Sign Up</b>
+        </span>
+    </div>
+</div>
+
+    <section class="hero" id="bosh">
+        <div class="hero-text">
+            <p class="kichik">KITOBLAR OLAMI</p>
+
+            <h1>
+                Har bir kitobda
+                <span>yangi olam</span>
+            </h1>
+
+            <p class="description">
+                Kitob o‘qish — yangi bilim, yangi fikr va yangi
+                imkoniyatlar sari ochilgan eshikdir.
+            </p>
+
+            <button class="main-btn" id="kitoblarniKorish">Kitoblarni ko‘rish</button>
+        </div>
+
+        <div class="hero-book">
+            <div class="book">
+                <div class="book-cover">
+                    <span>THE</span>
+                    <b>BOOK</b>
+                    <small>OF KNOWLEDGE</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="books" id="kitoblar">
+        <div class="section-title">
+            <p>ENG MASHHUR</p>
+            <h2>Mashhur kitoblar</h2>
+        </div>
+
+        <div class="book-list">
+
+            <div class="card">
+                <div class="cover cover1">
+                    <span>THE</span>
+                    <b>POWER</b>
+                    <small>OF MIND</small>
+                </div>
+
+                <div class="card-info">
+                    <h3>The Power of Mind</h3>
+                    <p>Bilim va rivojlanish</p>
+                    <button class="book-btn">Batafsil</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="cover cover2">
+                    <span>THE</span>
+                    <b>SECRET</b>
+                    <small>OF LIFE</small>
+                </div>
+
+                <div class="card-info">
+                    <h3>The Secret of Life</h3>
+                    <p>Hayotiy bilimlar</p>
+                    <button class="book-btn">Batafsil</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="cover cover3">
+                    <span>FIND</span>
+                    <b>YOUR</b>
+                    <small>WAY</small>
+                </div>
+
+                <div class="card-info">
+                    <h3>Find Your Way</h3>
+                    <p>Motivatsiya va muvaffaqiyat</p>
+                    <button class="book-btn">Batafsil</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="cover cover4">
+                    <span>NEW</span>
+                    <b>IDEAS</b>
+                    <small>EVERY DAY</small>
+                </div>
+
+                <div class="card-info">
+                    <h3>New Ideas</h3>
+                    <p>Ijodkorlik va g‘oyalar</p>
+                    <button class="book-btn">Batafsil</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="book-result">
+            <h3 id="result-title">Kitobni tanlang</h3>
+            <p id="result-text">
+                Batafsil ma’lumot olish uchun yuqoridagi kitoblardan birini tanlang.
+            </p>
+        </div>
+    </section>
+
+    <section class="about" id="haqida">
+        <div>
+            <p class="kichik">BIZ HAQIMIZDA</p>
+            <h2>Kitob — eng yaxshi do‘st</h2>
+            <p>
+                Bizning maqsadimiz insonlarni ko‘proq kitob o‘qishga
+                undash va ularga o‘zlari uchun eng yaxshi kitoblarni
+                topishga yordam berish.
+            </p>
+        </div>
+
+        <div class="about-number">
+            <b>1000+</b>
+            <span>Kitoblar</span>
+        </div>
+
+        <div class="about-number">
+            <b>500+</b>
+            <span>O‘quvchilar</span>
+        </div>
+    </section>
+
+    <footer id="aloqa">
+        <div class="logo">Book<span>World</span></div>
+        <p>Kitoblar olamiga xush kelibsiz.</p>
+        <p class="copyright">© 2026 BookWorld</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

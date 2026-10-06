@@ -1,0 +1,501 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f1e8;
+    color: #1e241f;
+}
+
+header {
+    width: 100%;
+    height: 85px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f1e8;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #ddd6c8;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #a66a35;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #a66a35;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    color: #a66a35;
+    transform: translateY(-3px);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+.login-box {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 25, 22, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+}
+
+.login-box.active {
+    display: flex;
+}
+
+.login-card {
+    width: 390px;
+    padding: 45px 40px;
+    background: #fffdf8;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+    animation: loginShow 0.4s ease;
+}
+
+@keyframes loginShow {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #eee8dc;
+    color: #333;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    background: #a66a35;
+    color: white;
+    transform: rotate(90deg);
+}
+
+.login-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.login-card h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.login-card > p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 15px 18px;
+    margin-bottom: 15px;
+    border: 2px solid #e2dbce;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+    background: white;
+    transition: 0.3s;
+}
+
+.login-card input:focus {
+    border-color: #a66a35;
+    box-shadow: 0 0 0 4px rgba(166, 106, 53, 0.1);
+}
+
+.login-submit {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    background: #1e241f;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 5px;
+    transition: 0.4s;
+}
+
+.login-submit:hover {
+    background: #a66a35;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(166, 106, 53, 0.3);
+}
+
+.login-text {
+    display: block;
+    margin-top: 22px;
+    color: #777;
+    font-size: 14px;
+}
+
+.login-text b {
+    color: #a66a35;
+}
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.header-btn {
+    padding: 13px 22px;
+    background: #1e241f;
+    color: white;
+    border-radius: 30px;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.header-btn:hover {
+    background: #a66a35;
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+.hero {
+    min-height: 650px;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.hero-text {
+    width: 55%;
+}
+
+.kichik {
+    color: #a66a35;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 76px;
+    line-height: 1;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #a66a35;
+    font-style: italic;
+}
+
+.description {
+    font-size: 18px;
+    color: #6c6b66;
+    max-width: 550px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.main-btn {
+    padding: 17px 32px;
+    background: #a66a35;
+    color: white;
+    border-radius: 40px;
+    font-size: 17px;
+    transition: 0.4s;
+}
+
+.main-btn:hover {
+    background: #1e241f;
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.hero-book {
+    width: 350px;
+    height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.book {
+    width: 245px;
+    height: 350px;
+    transform: rotateY(-20deg) rotateZ(4deg);
+    transition: 0.7s;
+    box-shadow: 30px 30px 45px rgba(0,0,0,0.25);
+}
+
+.book:hover {
+    transform: rotateY(0) rotateZ(0) scale(1.06);
+}
+
+.book-cover {
+    width: 100%;
+    height: 100%;
+    background: #252d28;
+    color: #eee6d7;
+    border-radius: 5px 12px 12px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 12px solid #171c19;
+    box-shadow: inset 10px 0 20px rgba(0,0,0,0.2);
+}
+
+.book-cover span {
+    font-size: 20px;
+    letter-spacing: 8px;
+}
+
+.book-cover b {
+    font-size: 55px;
+    margin: 15px 0;
+}
+
+.book-cover small {
+    letter-spacing: 3px;
+}
+
+.books {
+    padding: 100px 8%;
+    background: #fffdf8;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title p {
+    color: #a66a35;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 48px;
+    margin-top: 12px;
+}
+
+.book-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 260px;
+    background: #f5f1e8;
+    padding: 15px;
+    border-radius: 18px;
+    transition: 0.5s;
+    border: 1px solid #e7dfd0;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+}
+
+.cover {
+    height: 300px;
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card:hover .cover {
+    transform: scale(0.97);
+}
+
+.cover span {
+    font-size: 15px;
+    letter-spacing: 5px;
+}
+
+.cover b {
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+.cover small {
+    letter-spacing: 3px;
+}
+
+.cover1 {
+    background: #6e4935;
+}
+
+.cover2 {
+    background: #293f56;
+}
+
+.cover3 {
+    background: #3e4d38;
+}
+
+.cover4 {
+    background: #674d62;
+}
+
+.card-info {
+    padding: 20px 8px 8px;
+}
+
+.card-info h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.card-info p {
+    color: #777;
+    margin-bottom: 18px;
+}
+
+.book-btn {
+    padding: 11px 20px;
+    background: #1e241f;
+    color: white;
+    border-radius: 25px;
+    transition: 0.4s;
+}
+
+.book-btn:hover {
+    background: #a66a35;
+    transform: scale(1.08);
+}
+
+.book-result {
+    margin: 60px auto 0;
+    max-width: 800px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    background: #f5f1e8;
+    border: 1px solid #e2d9c9;
+}
+
+.book-result h3 {
+    font-size: 27px;
+    margin-bottom: 10px;
+    color: #a66a35;
+}
+
+.book-result p {
+    color: #666;
+}
+
+.about {
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    background: #252d28;
+    color: white;
+}
+
+.about > div:first-child {
+    flex: 1;
+}
+
+.about h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.about > div:first-child > p:last-child {
+    color: #bfc4bf;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 550px;
+}
+
+.about-number {
+    width: 150px;
+    text-align: center;
+}
+
+.about-number b {
+    display: block;
+    font-size: 38px;
+    color: #d19a67;
+}
+
+.about-number span {
+    color: #bfc4bf;
+}
+
+footer {
+    padding: 50px 8%;
+    background: #171c19;
+    color: white;
+}
+
+footer p {
+    margin-top: 15px;
+    color: #aaa;
+}
+
+.copyright {
+    font-size: 13px;
+}
